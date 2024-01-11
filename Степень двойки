@@ -1,0 +1,26 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int baseNumber = 2;
+        int numberInDegree;
+        int degreeOfBaseNumber = 1;
+        int number;
+        int seedNumber = 1;
+        int finalNumber = 100;
+
+        Random random = new Random();
+
+        number = random.Next(seedNumber, finalNumber); 
+        numberInDegree = baseNumber;
+        
+        while (numberInDegree <= number)
+        {
+            degreeOfBaseNumber++;
+            numberInDegree *= baseNumber;
+        }
+
+        Console.WriteLine($"Получили сучайное число: {number}. К числу {baseNumber} получили степень {degreeOfBaseNumber}, в результате получили число: {numberInDegree}");
+        Console.ReadKey();
+    }
+}
